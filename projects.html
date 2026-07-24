@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rey Ardyansyah | Daftar Proyek & Eksplorasi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/output.css" />
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4, .font-display { font-family: 'Sora', sans-serif; }
+  </style>
+</head>
+<body class="page-enter bg-[#e0f2fe] dark:bg-[#0d1527] text-[#0d1527] dark:text-[#e0f2fe] antialiased selection:bg-[#2563eb] selection:text-white min-h-screen flex flex-col justify-between overflow-x-hidden transition-colors duration-300">
+
+  <div class="pointer-events-none fixed top-12 left-1/2 -z-10 h-72 w-72 -translate-x-1/2 rounded-full bg-[#7dd3fc]/40 dark:bg-[#2563eb]/20 blur-3xl animate-pulse-subtle"></div>
+  <div class="pointer-events-none fixed top-1/3 -right-20 -z-10 h-80 w-80 rounded-full bg-[#3b82f6]/20 dark:bg-[#1e3a8a]/20 blur-3xl animate-float"></div>
+  <div class="pointer-events-none fixed bottom-10 -left-20 -z-10 h-80 w-80 rounded-full bg-[#60a5fa]/25 dark:bg-[#2563eb]/15 blur-3xl animate-float" style="animation-delay: 2s;"></div>
+
+  <header class="fixed top-4 z-50 w-full px-4 sm:px-6">
+    <nav class="mx-auto flex max-w-5xl items-center justify-between rounded-full border border-[#1e3a8a]/20 dark:border-[#3b82f6]/20 bg-[#ffffff]/85 dark:bg-[#111c35]/85 px-5 py-3 backdrop-blur-md shadow-lg shadow-[#0d1527]/5 transition-all duration-300">
+      <a href="index.html" class="font-display text-lg sm:text-xl font-extrabold tracking-tight text-[#0d1527] dark:text-[#e0f2fe] flex items-center gap-1.5 group">
+        <span class="flex h-3 w-3 rounded-full bg-[#2563eb] dark:bg-[#3b82f6] group-hover:scale-125 transition-transform"></span>
+        REY<span class="text-[#2563eb] dark:text-[#3b82f6]">.</span>DEV
+      </a>
+
+      <ul class="hidden items-center gap-6 md:flex">
+        <li><a href="index.html" class="text-sm font-semibold text-[#1e3a8a] dark:text-slate-300 transition-colors hover:text-[#2563eb] dark:hover:text-[#3b82f6]">Home</a></li>
+        <li><a href="about.html" class="text-sm font-semibold text-[#1e3a8a] dark:text-slate-300 transition-colors hover:text-[#2563eb] dark:hover:text-[#3b82f6]">About</a></li>
+        <li><a href="projects.html" class="text-sm font-bold text-[#2563eb] dark:text-[#3b82f6] transition-colors">Projects</a></li>
+        <li><a href="project-detail.html" class="text-sm font-semibold text-[#1e3a8a] dark:text-slate-300 transition-colors hover:text-[#2563eb] dark:hover:text-[#3b82f6]">Project Detail</a></li>
+      </ul>
+
+      <div class="hidden items-center gap-3 md:flex">
+        <a href="index.html#contact" class="btn-primary text-xs py-2 px-5 shadow-none">Hire Me</a>
+      </div>
+
+      <button id="menuToggle" aria-label="Menu" class="rounded-full p-2 text-[#0d1527] dark:text-[#e0f2fe] md:hidden hover:bg-[#f0f9ff] dark:hover:bg-[#1e3a8a] focus:outline-none transition-colors">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </nav>
+
+    <div id="mobileMenu" class="mx-auto mt-2 max-w-4xl hidden rounded-2xl border border-[#1e3a8a]/20 dark:border-[#3b82f6]/20 bg-[#ffffff]/95 dark:bg-[#111c35]/95 px-5 py-5 backdrop-blur-lg md:hidden shadow-xl">
+      <div class="flex flex-col gap-3">
+        <a href="index.html" class="rounded-xl px-4 py-2.5 text-sm font-semibold text-[#1e3a8a] dark:text-slate-300 hover:bg-[#f0f9ff] dark:hover:bg-[#0d1527] flex items-center justify-between transition-colors">Home <span class="text-xs">&rarr;</span></a>
+        <a href="about.html" class="rounded-xl px-4 py-2.5 text-sm font-semibold text-[#1e3a8a] dark:text-slate-300 hover:bg-[#f0f9ff] dark:hover:bg-[#0d1527] flex items-center justify-between transition-colors">About <span class="text-xs">&rarr;</span></a>
+        <a href="projects.html" class="rounded-xl px-4 py-2.5 text-sm font-bold bg-[#f0f9ff] dark:bg-[#0d1527] text-[#2563eb] dark:text-[#3b82f6] flex items-center justify-between">Projects <span class="text-xs">&rarr;</span></a>
+        <a href="project-detail.html" class="rounded-xl px-4 py-2.5 text-sm font-semibold text-[#1e3a8a] dark:text-slate-300 hover:bg-[#f0f9ff] dark:hover:bg-[#0d1527] flex items-center justify-between transition-colors">Project Detail <span class="text-xs">&rarr;</span></a>
+        <div class="pt-2 border-t border-[#7dd3fc]/30 dark:border-[#1e3a8a] mt-1">
+          <a href="index.html#contact" class="btn-primary w-full text-center text-xs py-3">Hire Me Now</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-32 sm:pt-40 pb-20 flex-grow">
+    <section class="mx-auto max-w-5xl px-4 sm:px-6 mb-12">
+      <div class="reveal text-center max-w-2xl mx-auto mb-12">
+        <span class="font-mono text-xs font-bold text-[#2563eb] dark:text-[#3b82f6] uppercase tracking-wider">// MY PROJECTS</span>
+        <h1 class="text-display font-display font-extrabold text-[#0d1527] dark:text-[#e0f2fe] mt-1 leading-tight">
+          Portofolio & Eksplorasi Teknis
+        </h1>
+        <p class="text-sm sm:text-base text-[#1e3a8a] dark:text-slate-300 mt-3 leading-relaxed">
+          Kumpulan implementasi nyata dalam membangun solusi perangkat lunak, pengembangan web PHP Native, dan manajemen basis data.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        
+        <article class="reveal card-modern flex flex-col lg:flex-row gap-8 items-center justify-between group">
+          <div class="w-full lg:w-1/2 space-y-4">
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="badge-tech">Electron</span>
+              <span class="badge-tech">JavaFX</span>
+              <span class="badge-tech">SQLite</span>
+              <span class="font-mono text-xs font-bold text-[#2563eb] dark:text-[#3b82f6] bg-[#f0f9ff] dark:bg-[#0d1527] px-2.5 py-1 rounded-md border border-[#7dd3fc] dark:border-[#1e3a8a]">WINDOWS APP</span>
+            </div>
+            <h2 class="font-display text-2xl font-bold text-[#0d1527] dark:text-[#e0f2fe] group-hover:text-[#2563eb] dark:group-hover:text-[#3b82f6] transition-colors">
+              Aplikasi Pencatatan Tugas Kuliah
+            </h2>
+            <p class="text-sm sm:text-base text-[#1e3a8a] dark:text-slate-300 leading-relaxed">
+              Sistem manajemen tugas mahasiswa desktop lokal yang dikembangkan untuk lingkungan Windows. Menggunakan arsitektur JavaFX dan Electron dengan penyimpanan basis data SQLite untuk memastikan responsivitas tinggi, konsistensi data, dan antarmuka yang bersih tanpa ketergantungan koneksi internet.
+            </p>
+            <div class="pt-2">
+              <a href="project-detail.html#task" class="btn-primary text-xs py-2.5 px-6 inline-flex items-center gap-2">
+                Lihat Studi Kasus <span class="font-mono">&rarr;</span>
+              </a>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 rounded-2xl border border-[#7dd3fc] dark:border-[#1e3a8a] bg-[#0d1527] dark:bg-[#080e1a] p-5 font-mono text-xs text-slate-300 shadow-xl overflow-x-auto">
+            <div class="flex items-center justify-between pb-3 mb-3 border-b border-[#1e3a8a] text-[11px] text-[#7dd3fc]">
+              <span>TaskController.java</span>
+              <span class="flex gap-1.5"><span class="h-2 w-2 rounded-full bg-rose-500"></span><span class="h-2 w-2 rounded-full bg-amber-500"></span><span class="h-2 w-2 rounded-full bg-emerald-500"></span></span>
+            </div>
+            <div class="space-y-1">
+              <p class="text-[#60a5fa]">public class <span class="text-white font-bold">TaskManagerApp</span> {</p>
+              <p class="pl-4 text-[#7dd3fc]">private final <span class="text-slate-300">SQLiteConnection db;</span></p>
+              <p class="pl-4 text-[#3b82f6]">public void <span class="text-white">renderDashboard()</span> {</p>
+              <p class="pl-8 text-slate-400">// Load user tasks & calculate progress</p>
+              <p class="pl-8 text-emerald-400">ui.displayActiveTasks(db.fetchPending());</p>
+              <p class="pl-4 font-bold text-[#60a5fa]">}</p>
+              <p>}</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="reveal card-modern flex flex-col lg:flex-row-reverse gap-8 items-center justify-between group">
+          <div class="w-full lg:w-1/2 space-y-4">
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="badge-tech">System Design</span>
+              <span class="badge-tech">AI Integration</span>
+              <span class="badge-tech">UML</span>
+              <span class="font-mono text-xs font-bold text-[#2563eb] dark:text-[#3b82f6] bg-[#f0f9ff] dark:bg-[#0d1527] px-2.5 py-1 rounded-md border border-[#7dd3fc] dark:border-[#1e3a8a]">RESEARCH</span>
+            </div>
+            <h2 class="font-display text-2xl font-bold text-[#0d1527] dark:text-[#e0f2fe] group-hover:text-[#2563eb] dark:group-hover:text-[#3b82f6] transition-colors">
+              Sistem Informasi E-Learning Berbasis AI
+            </h2>
+            <p class="text-sm sm:text-base text-[#1e3a8a] dark:text-slate-300 leading-relaxed">
+              Perancangan arsitektur sistem informasi e-learning cerdas yang mampu memberikan rekomendasi materi pembelajaran secara adaptif berdasarkan efektivitas pemahaman mahasiswa. Proyek mencakup pemodelan UML, alur sistem informasi, dan struktur integrasi mesin kecerdasan buatan.
+            </p>
+            <div class="pt-2">
+              <a href="project-detail.html#elearning" class="btn-secondary text-xs py-2.5 px-6 inline-flex items-center gap-2">
+                Detail Arsitektur <span class="font-mono">&rarr;</span>
+              </a>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 rounded-2xl border border-[#7dd3fc] dark:border-[#1e3a8a] bg-[#f0f9ff] dark:bg-[#0d1527] p-6 font-mono text-xs text-[#0d1527] dark:text-slate-300 shadow-inner flex flex-col justify-center min-h-[220px]">
+            <div class="text-[#2563eb] dark:text-[#3b82f6] font-bold border-b border-[#7dd3fc] dark:border-[#1e3a8a] pb-2 mb-4 flex items-center justify-between">
+              <span>[AI_ADAPTIVE_PIPELINE]</span>
+              <span class="h-2 w-2 rounded-full bg-[#2563eb] dark:bg-[#3b82f6] animate-ping"></span>
+            </div>
+            <div class="space-y-3 font-semibold text-xs">
+              <div class="p-2.5 rounded-lg bg-white dark:bg-[#111c35] border border-[#7dd3fc] dark:border-[#1e3a8a] text-[#0d1527] dark:text-[#e0f2fe] flex items-center justify-between">
+                <span>01. Input Data Mahasiswa</span>
+                <span class="text-[#2563eb] dark:text-[#3b82f6]">&check;</span>
+              </div>
+              <div class="p-2.5 rounded-lg bg-[#2563eb] dark:bg-[#3b82f6] text-white dark:text-[#0d1527] flex items-center justify-between shadow-md">
+                <span>02. AI Learning Analysis</span>
+                <span class="animate-pulse">&bull;&bull;&bull;</span>
+              </div>
+              <div class="p-2.5 rounded-lg bg-white dark:bg-[#111c35] border border-[#7dd3fc] dark:border-[#1e3a8a] text-[#0d1527] dark:text-[#e0f2fe] flex items-center justify-between">
+                <span>03. Adaptasi Materi Otomatis</span>
+                <span class="text-[#2563eb] dark:text-[#3b82f6]">&rarr;</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="reveal card-modern flex flex-col lg:flex-row gap-8 items-center justify-between group">
+          <div class="w-full lg:w-1/2 space-y-4">
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="badge-tech">SQL</span>
+              <span class="badge-tech">RDBMS</span>
+              <span class="badge-tech">Data Modeling</span>
+              <span class="font-mono text-xs font-bold text-[#2563eb] dark:text-[#3b82f6] bg-[#f0f9ff] dark:bg-[#0d1527] px-2.5 py-1 rounded-md border border-[#7dd3fc] dark:border-[#1e3a8a]">DATABASE</span>
+            </div>
+            <h2 class="font-display text-2xl font-bold text-[#0d1527] dark:text-[#e0f2fe] group-hover:text-[#2563eb] dark:group-hover:text-[#3b82f6] transition-colors">
+              Basis Data Keuangan Pribadi
+            </h2>
+            <p class="text-sm sm:text-base text-[#1e3a8a] dark:text-slate-300 leading-relaxed">
+              Desain dan pemodelan sistem basis data relasional untuk pencatatan, pengelompokan, dan pelaporan arus kas keuangan pribadi. Diberdayakan dengan normalisasi data tabel yang efisien untuk mencegah redundansi dan mempercepat proses eksekusi query pelaporan.
+            </p>
+            <div class="pt-2">
+              <a href="project-detail.html#db" class="btn-secondary text-xs py-2.5 px-6 inline-flex items-center gap-2">
+                Lihat Skema SQL <span class="font-mono">&rarr;</span>
+              </a>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 rounded-2xl border border-[#7dd3fc] dark:border-[#1e3a8a] bg-[#0d1527] dark:bg-[#080e1a] p-5 font-mono text-xs text-slate-300 shadow-xl">
+            <div class="text-[#7dd3fc] font-bold border-b border-[#1e3a8a] pb-2 mb-3">&equiv; SCHEMA_TRANSAKSI_KEUANGAN</div>
+            <div class="space-y-1.5 text-[11px] pl-3 border-l-2 border-[#3b82f6]">
+              <div class="text-white font-bold">CREATE TABLE <span class="text-[#60a5fa]">transaksi</span> (</div>
+              <div class="pl-4">+ id_transaksi <span class="text-[#7dd3fc]">INT PRIMARY KEY</span>,</div>
+              <div class="pl-4">+ id_kategori <span class="text-[#7dd3fc]">INT FOREIGN KEY</span>,</div>
+              <div class="pl-4">+ jenis_transaksi <span class="text-[#7dd3fc]">VARCHAR(10)</span>,</div>
+              <div class="pl-4">+ nominal <span class="text-white font-bold">DECIMAL(15,2)</span>,</div>
+              <div class="pl-4">+ tanggal <span class="text-[#7dd3fc]">TIMESTAMP DEFAULT NOW()</span></div>
+              <div>);</div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-[#1e3a8a]/15 dark:border-[#3b82f6]/15 bg-[#ffffff] dark:bg-[#111c35] py-8 text-center text-xs font-mono text-[#1e3a8a] dark:text-[#7dd3fc]">
+    <div class="mx-auto max-w-5xl px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p class="font-bold text-[#0d1527] dark:text-[#e0f2fe]">&copy; 2026 Rey Ardyansyah.</p>
+      <p>Computer Club Digital Talent 2026 &bull; Web Development</p>
+      <p class="text-[11px] text-[#2563eb] dark:text-[#3b82f6] font-semibold">Code & Tailwind CSS v4</p>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
