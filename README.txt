@@ -12,7 +12,7 @@ Divisi          : Web Development
 TAUTAN DEPLOYMENT (LIVE DEMO)
 --------------------------------------------------------------------
 URL Website     : [TEMPEL_LINK_VERCEL/NETLIFY_ANDA_DI_SINI]
-URL GitHub      : [TEMPEL_LINK_GITHUB_JIKA_ADA]
+URL GitHub      : https://github.com/ReyArdyansyah
 
 CARA MENJALANKAN PROYEK SECARA LOKAL
 --------------------------------------------------------------------
