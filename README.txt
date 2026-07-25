@@ -11,7 +11,7 @@ Divisi          : Web Development
 
 TAUTAN DEPLOYMENT (LIVE DEMO)
 --------------------------------------------------------------------
-URL Website     : [TEMPEL_LINK_VERCEL/NETLIFY_ANDA_DI_SINI]
+URL Website     : https://project-portfolio-reyardyansyah.vercel.app/
 URL GitHub      : https://github.com/ReyArdyansyah
 
 CARA MENJALANKAN PROYEK SECARA LOKAL
