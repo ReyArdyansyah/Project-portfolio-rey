@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rey Ardyansyah | Software Engineering</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="./assets/css/output.css" />
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4, .font-display { font-family: 'Sora', sans-serif; }
+  </style>
+</head>
+<body class="page-enter bg-sky-100 dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased selection:bg-blue-600 selection:text-white min-h-screen flex flex-col justify-between overflow-x-hidden transition-colors duration-300">
+
+  <!-- ══ NAVBAR ══ -->
+
+  <div class="pointer-events-none fixed top-12 left-1/2 -z-10 h-72 w-72 -translate-x-1/2 rounded-full bg-sky-300/40 dark:bg-blue-600/20 blur-3xl animate-float"></div>
+  <div class="pointer-events-none fixed top-1/3 -right-20 -z-10 h-80 w-80 rounded-full bg-blue-500/20 dark:bg-blue-900/20 blur-3xl animate-float" style="animation-delay: 2s;"></div>
+
+  <header class="fixed top-4 z-50 w-full px-4 sm:px-6" data-aos="fade-down" data-aos-duration="600">
+    <nav class="mx-auto flex max-w-5xl items-center justify-between rounded-full border border-sky-300 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 px-5 py-3 backdrop-blur-md shadow-md transition-all duration-300">
+      <a href="index.html" class="font-display text-lg sm:text-xl font-extrabold tracking-tight text-slate-900 dark:text-white flex items-center gap-1.5 group">
+        <span class="flex h-3 w-3 rounded-full bg-blue-600 dark:bg-blue-500 group-hover:scale-125 transition-transform"></span>
+        REY<span class="text-blue-600 dark:text-blue-500">.</span>DEV
+      </a>
+
+      <ul class="hidden items-center gap-6 md:flex">
+        <li><a href="index.html" class="text-sm font-bold text-blue-600 dark:text-blue-400 transition-colors">Home</a></li>
+        <li><a href="about.html" class="text-sm font-semibold text-slate-700 dark:text-slate-300 transition-colors hover:text-blue-600 dark:hover:text-blue-400">About</a></li>
+        <li><a href="projects.html" class="text-sm font-semibold text-slate-700 dark:text-slate-300 transition-colors hover:text-blue-600 dark:hover:text-blue-400">Projects</a></li>
+        <li><a href="project-detail.html" class="text-sm font-semibold text-slate-700 dark:text-slate-300 transition-colors hover:text-blue-600 dark:hover:text-blue-400">Project Detail</a></li>
+      </ul>
+
+      <div class="hidden items-center gap-3 md:flex">
+        <button id="theme-toggle" aria-label="Toggle Tema" class="rounded-full border border-sky-300 dark:border-slate-700 bg-sky-50 dark:bg-slate-800 p-2 text-slate-700 dark:text-slate-200 transition-colors hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 dark:hover:text-slate-950">
+          <svg id="icon-sun" class="hidden h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+          <svg id="icon-moon" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+        </button>
+        <a href="#contact" class="btn-primary text-xs py-2 px-5 shadow-none">Hire Me</a>
+      </div>
+
+      <button id="menuToggle" aria-label="Menu" class="rounded-full p-2 text-slate-900 dark:text-white md:hidden hover:bg-sky-200 dark:hover:bg-slate-800 focus:outline-none transition-colors">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </nav>
+
+    <div id="mobileMenu" class="mx-auto mt-2 max-w-4xl hidden rounded-2xl border border-sky-300 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 px-5 py-5 backdrop-blur-lg md:hidden shadow-xl">
+      <div class="flex flex-col gap-3">
+        <a href="index.html" class="rounded-xl px-4 py-2.5 text-sm font-bold bg-sky-100 dark:bg-slate-800 text-blue-600 dark:text-blue-400 flex items-center justify-between">Home <span class="text-xs">&rarr;</span></a>
+        <a href="about.html" class="rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-700 dark:text-slate-300 hover:bg-sky-50 dark:hover:bg-slate-800 flex items-center justify-between transition-colors">About <span class="text-xs">&rarr;</span></a>
+        <a href="projects.html" class="rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-700 dark:text-slate-300 hover:bg-sky-50 dark:hover:bg-slate-800 flex items-center justify-between transition-colors">Projects <span class="text-xs">&rarr;</span></a>
+        <a href="project-detail.html" class="rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-700 dark:text-slate-300 hover:bg-sky-50 dark:hover:bg-slate-800 flex items-center justify-between transition-colors">Project Detail <span class="text-xs">&rarr;</span></a>
+        <div class="pt-2 border-t border-sky-200 dark:border-slate-800 mt-1">
+          <a href="#contact" class="btn-primary w-full text-center text-xs py-3">Hire Me Now</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══ HERO ══ -->
+
+  <main class="pt-32 sm:pt-40 pb-20 flex-grow">
+    <section class="mx-auto max-w-4xl px-4 sm:px-6 py-8 sm:py-16 text-center">
+      <p data-aos="fade-up" class="font-mono text-xs sm:text-sm font-bold tracking-widest text-blue-600 dark:text-blue-400 uppercase mb-6">
+        FULL STACK WEB DEVELOPER & SOFTWARE ENGINEER
+      </p>
+
+      <h1 data-aos="fade-up" data-aos-delay="100" class="text-display font-display font-extrabold tracking-tight text-slate-900 dark:text-white max-w-3xl mx-auto leading-[1.1]">
+        Arsitektur Sistem Bersih, Solusi Perangkat Lunak <span class="text-blue-600 dark:text-blue-400 underline decoration-sky-400 dark:decoration-blue-600 decoration-wavy decoration-2 underline-offset-8">Andal</span>.
+      </h1>
+
+      <p data-aos="fade-up" data-aos-delay="200" class="text-lead mt-6 sm:mt-8 max-w-xl mx-auto text-slate-700 dark:text-slate-300 font-normal leading-relaxed">
+        Membangun aplikasi desktop berperforma tinggi, perancangan basis data relasional terstruktur, serta pengembangan web dinamis menggunakan Tailwind CSS v4 dan Javascript.
+      </p>
+
+      <div data-aos="fade-up" data-aos-delay="300" class="mt-10 sm:mt-12 flex flex-col sm:flex-row justify-center gap-4">
+        <a href="projects.html" class="btn-primary w-full sm:w-auto">Eksplorasi Project</a>
+        <a href="about.html" class="btn-secondary w-full sm:w-auto">Profil Detail</a>
+      </div>
+    </section>
+
+    <!-- ══ PROFIL RINGKASAN ══ -->
+
+    <section class="mx-auto max-w-5xl px-4 sm:px-6 py-10 sm:py-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div data-aos="fade-right" class="card-modern md:col-span-2 flex flex-col justify-between relative overflow-hidden group">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-sky-50 dark:bg-slate-800/50 rounded-bl-full -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+          <div>
+            <div class="flex items-center gap-2 mb-4">
+              <span class="h-3 w-3 rounded-full bg-blue-600 dark:bg-blue-400"></span>
+              <span class="font-mono text-xs font-bold text-blue-800 dark:text-sky-300 uppercase tracking-wider">PROFIL RINGKAS</span>
+            </div>
+            <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-3">Rekayasa Perangkat Lunak & PHP Native</h2>
+            <p class="text-sm sm:text-base leading-relaxed text-slate-700 dark:text-slate-300">
+              Mahasiswa Teknologi Rekayasa Perangkat Lunak yang berfokus pada pengembangan perangkat lunak, arsitektur sistem informasi, dan pengembangan web dinamis dengan Tailwind CSS . Memiliki keahlian dalam membangun aplikasi desktop, desain basis data, serta integrasi sistem web yang efisien.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-sky-100 dark:border-slate-800 flex items-center justify-between font-mono text-xs text-blue-600 dark:text-blue-400 font-bold">
+            <span>ID: TRPL-PNB</span>
+            <a href="about.html" class="hover:underline inline-flex items-center gap-1">Selengkapnya &rarr;</a>
+          </div>
+        </div>
+
+        <div data-aos="fade-left" data-aos-delay="150" class="card-modern flex flex-col justify-between bg-slate-900 dark:bg-slate-950 text-white border-slate-800">
+          <div>
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4 font-mono text-xs text-sky-400">
+              <span>TERMINAL</span>
+              <span class="flex gap-1.5">
+                <span class="h-2 w-2 rounded-full bg-blue-500"></span>
+                <span class="h-2 w-2 rounded-full bg-sky-400"></span>
+              </span>
+            </div>
+            <div class="font-mono text-xs space-y-2 text-slate-300">
+              <p class="text-sky-400">&gt; system.status</p>
+              <p class="pl-2 font-bold text-white">&bull; ONLINE (Active)</p>
+              <p class="text-sky-400">&gt; main.focus</p>
+              <p class="pl-2">&bull; Desktop Dev</p>
+              <p class="pl-2">&bull; Database Design</p>
+              <p class="pl-2">&bull; PHP Native Dev</p>
+              <p class="pl-2">&bull; Tailwind CSS v4</p>
+              <p class="pl-2">&bull; Java</p>
+            </div>
+          </div>
+          <div class="mt-6 pt-3 border-t border-slate-800 font-mono text-[11px] text-sky-400 flex items-center justify-between">
+            <span>VERSI: 2026.1</span>
+            <span class="animate-pulse">&block;</span>
+          </div>
+        </div>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="100" class="mt-6 card-modern py-6 px-6 sm:px-8">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <span class="font-display font-bold text-sm sm:text-base text-slate-900 dark:text-white whitespace-nowrap">Keahlian Teknis :</span>
+          <div class="flex flex-wrap gap-2 justify-start sm:justify-end">
+            <span class="badge-tech">Java & JavaFX</span>
+            <span class="badge-tech">PHP Web Dev</span>
+            <span class="badge-tech">HTML5 & CSS3</span>
+            <span class="badge-tech">Tailwind CSS v4</span>
+            <span class="badge-tech">JavaScript</span>
+            <span class="badge-tech">SQL / RDBMS</span>
+            <span class="badge-tech">Electron Desktop</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ RINGKASAN PROJECT ══ -->
+
+    <section class="mx-auto max-w-5xl px-4 sm:px-6 py-12 sm:py-16">
+      <div data-aos="fade-up" class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:mb-12 gap-3">
+        <div>
+          <span class="font-mono text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">// PORTFOLIO</span>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-1">Karya & Eksplorasi Sistem</h2>
+        </div>
+        <a href="projects.html" class="text-xs sm:text-sm font-bold text-blue-600 dark:text-blue-400 hover:text-slate-900 dark:hover:text-white inline-flex items-center gap-1.5 transition-colors bg-white dark:bg-slate-900 px-4 py-2 rounded-full border border-sky-300 dark:border-slate-800 shadow-2xs w-fit">
+          Lihat Semua Project <span>&rarr;</span>
+        </a>
+      </div>
+
+      <div class="grid gap-6 grid-cols-1 md:grid-cols-3">
+        
+        <article data-aos="fade-up" class="card-modern md:col-span-2 flex flex-col justify-between group">
+          <div>
+            <div class="mb-5 rounded-xl border border-slate-800 bg-slate-900 dark:bg-slate-950 p-4 sm:p-5 font-mono text-xs text-slate-300 overflow-hidden relative shadow-inner">
+              <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-800 text-[11px] text-sky-400">
+                <span>TaskController.java</span>
+                <span>DESKTOP APP</span>
+              </div>
+              <p class="text-blue-400">public class <span class="text-white font-bold">TaskController</span> {</p>
+              <p class="pl-4 text-sky-400">@FXML <span class="text-slate-300">private TableView table;</span></p>
+              <p class="pl-4 text-blue-500">public void <span class="text-white">initSQLiteDatabase()</span> {</p>
+              <p class="pl-8 text-slate-400">// Relational local database connection</p>
+              <p class="pl-4 font-bold text-blue-400">}</p>
+              <p>}</p>
+            </div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="badge-tech">Electron</span>
+              <span class="badge-tech">JavaFX</span>
+              <span class="badge-tech">SQLite</span>
+            </div>
+            <h3 class="font-display text-lg sm:text-xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Pencatatan Tugas Kuliah</h3>
+            <p class="mt-2 text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">Aplikasi dekstop manajemen tugas akademis lokal berbasis Windows dengan penyimpanan relasional cepat dan antarmuka responsif.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-sky-100 dark:border-slate-800 flex items-center justify-between">
+            <span class="font-mono text-[11px] text-blue-800 dark:text-sky-400 font-semibold">STATUS: COMPLETED</span>
+            <a href="project-detail.html#task" class="text-xs font-bold text-blue-600 dark:text-blue-400 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">Studi Kasus &rarr;</a>
+          </div>
+        </article>
+
+        <article data-aos="fade-up" data-aos-delay="150" class="card-modern flex flex-col justify-between group">
+          <div>
+            <div class="mb-5 rounded-xl border border-slate-800 bg-slate-900 dark:bg-slate-950 p-4 font-mono text-xs text-slate-300 flex flex-col justify-center min-h-[148px] relative overflow-hidden">
+              <div class="text-white font-bold border-b border-slate-800 pb-1.5 mb-2.5 flex items-center justify-between">
+                <span>[AI_PIPELINE]</span>
+                <span class="h-2 w-2 rounded-full bg-blue-500"></span>
+              </div>
+              <div class="space-y-1.5 font-semibold text-[11px]">
+                <div class="text-blue-400">&bull; Adaptive Learning</div>
+                <div class="text-sky-300">&bull; Material Select</div>
+                <div class="text-slate-300">&bull; Automated Sys</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-1.5 mb-2 flex-wrap">
+              <span class="badge-tech">SysDesign</span>
+              <span class="badge-tech">AI Engine</span>
+            </div>
+            <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Sistem E-Learning AI</h3>
+            <p class="mt-2 text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">Perancangan arsitektur sistem informasi cerdas untuk transfer pengetahuan adaptif.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-sky-100 dark:border-slate-800 flex items-center justify-between">
+            <span class="font-mono text-[11px] text-blue-800 dark:text-sky-400 font-semibold">RESEARCH</span>
+            <a href="project-detail.html#elearning" class="text-xs font-bold text-blue-600 dark:text-blue-400 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">Detail &rarr;</a>
+          </div>
+        </article>
+
+        <article data-aos="fade-up" data-aos-delay="300" class="card-modern md:col-span-3 flex flex-col sm:flex-row sm:items-center justify-between group gap-6">
+          <div class="sm:max-w-xl">
+            <div class="flex items-center gap-2 mb-2.5">
+              <span class="badge-tech">SQL</span>
+              <span class="badge-tech">RDBMS</span>
+              <span class="badge-tech">Data Modeling</span>
+            </div>
+            <h3 class="font-display text-lg sm:text-xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Basis Data Keuangan Pribadi</h3>
+            <p class="mt-2 text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">Desain dan pemodelan sistem basis data relasional terstruktur untuk efisiensi pencatatan dan pelaporan pengeluaran keuangan pribadi secara akurat.</p>
+          </div>
+          <div class="w-full sm:w-64 rounded-xl border border-slate-800 bg-slate-900 dark:bg-slate-950 p-3.5 font-mono text-[11px] text-slate-300">
+            <div class="text-sky-400 font-bold border-b border-slate-800 pb-1 mb-1.5">&equiv; TABEL_PENGELUARAN</div>
+            <div class="space-y-0.5 text-[10px] pl-2 border-l-2 border-blue-500">
+              <div>+ id_transaksi <span class="text-blue-400">(PK)</span></div>
+              <div>+ kategori_id <span class="text-blue-400">(FK)</span></div>
+              <div>+ nominal : <span class="text-white font-bold">DECIMAL</span></div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="contact" class="mx-auto max-w-4xl px-4 sm:px-6 py-12 sm:py-16">
+      <div data-aos="zoom-in" data-aos-duration="800" class="rounded-3xl border-2 border-blue-600 dark:border-blue-500 bg-white dark:bg-slate-900 p-6 sm:p-12 text-center shadow-xl shadow-blue-600/5 relative overflow-hidden">
+        <div class="absolute -top-24 -left-24 w-48 h-48 bg-sky-50 dark:bg-slate-950 rounded-full -z-10"></div>
+        <div class="absolute -bottom-24 -right-24 w-48 h-48 bg-sky-50 dark:bg-slate-950 rounded-full -z-10"></div>
+        
+        <span class="font-mono text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">// CONNECT</span>
+        <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">Siap Membangun Solusi Bersama?</h2>
+        <p class="mt-3 text-xs sm:text-sm text-slate-700 dark:text-slate-300 max-w-md mx-auto leading-relaxed">
+          Terbuka untuk diskusi proyek pengembangan perangkat lunak, kolaborasi tim teknis, maupun konsultasi pengembangan web PHP Native.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row justify-center gap-3.5">
+          <a href="mailto:reyardyansyah001@gmail.com" class="btn-primary w-full sm:w-auto">Kirim Email Sekarang</a>
+          <a href="https://github.com/ReyArdyansyah" target="_blank" class="btn-secondary w-full sm:w-auto">GitHub Profile</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══ FOOTER ══ -->
+   
+  <footer class="border-t border-sky-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-8 text-center text-xs font-mono text-slate-600 dark:text-slate-400">
+    <div class="mx-auto max-w-5xl px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p class="font-bold text-slate-900 dark:text-white">&copy; 2026 Rey Ardyansyah.</p>
+      <p>Computer Club Digital Talent 2026 &bull; Web Development</p>
+      <p class="text-[11px] text-blue-600 dark:text-blue-400 font-semibold">Html Code & Tailwind CSS v4</p>
+    </div>
+  </footer>
+  
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "project-portfolio-rey",
+  "version": "1.0.0",
+  "description": "Portofolio Rey Ardyansyah - Computer Club Digital Talent 2026",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx @tailwindcss/cli -i ./assets/css/input.css -o ./assets/css/output.css --watch",
+    "build:css": "npx @tailwindcss/cli -i ./assets/css/input.css -o ./assets/css/output.css --minify"
+  },
+  "keywords": [
+    "portfolio",
+    "tailwindcss",
+    "trpl",
+    "pnb"
+  ],
+  "author": "Rey Ardyansyah",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.0",
+    "tailwindcss": "^4.0.0"
+  }
+}
