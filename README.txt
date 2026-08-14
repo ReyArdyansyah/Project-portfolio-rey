@@ -16,33 +16,33 @@ URL GitHub      : https://github.com/ReyArdyansyah
 
 CARA MENJALANKAN PROYEK SECARA LOKAL
 --------------------------------------------------------------------
-LANGKAH A: Menyiapkan Folder Projek
+LANGKAH 1: Menyiapkan Folder Projek
 1. Ekstrak file arsip `.zip` projek ini (atau clone dari repositori GitHub).
 2. Buka aplikasi Visual Studio Code (VS Code).
 3. Pilih menu "File" -> "Open Folder...", lalu pilih folder direktori 
    projek utama (`Project-portfolio-rey`).
 
-LANGKAH B: Menginstal Dependensi (Opsional jika ingin mengubah CSS)
-Jika Anda ingin mengembangkan atau mengubah gaya CSS melalui Tailwind CLI:
+LANGKAH 2: Menginstal Dependensi (Opsional jika ingin mengubah CSS)
+Jika ingin mengembangkan atau mengubah gaya CSS melalui Tailwind CLI:
 1. Buka terminal di VS Code dengan menekan tombol `Ctrl + ~` (atau menu Terminal -> New Terminal).
 2. Ketik perintah berikut untuk menginstal paket yang dibutuhkan:
    > npm install
 3. Tunggu hingga proses unduh paket selesai (pastikan terhubung internet).
 
-LANGKAH C: Menjalankan Compiler Tailwind CSS (Mode Development / Watch)
-Jika Anda melakukan perubahan pada file `input.css` atau struktur HTML dan ingin 
+LANGKAH 3: Menjalankan Compiler Tailwind CSS (Mode Development / Watch)
+Jika melakukan perubahan pada file `input.css` atau struktur HTML dan ingin 
 Tailwind otomatis memperbarui file `output.css` secara *real-time*:
 1. Di terminal VS Code, jalankan perintah:
    > npm run dev
 2. Biarkan terminal tetap terbuka selama Anda melakukan penulisan kode.
 
-LANGKAH D: Menjalankan Kompilasi Versi Produksi (Build)
+LANGKAH 4: Menjalankan Kompilasi Versi Produksi (Build)
 Sebelum melakukan publikasi/deploy final, pastikan file CSS di-minify agar ukurannya ringan:
 1. Di terminal VS Code, jalankan perintah:
    > npm run build:css
 
-LANGKAH E: Menampilkan Halaman Web ke Layar (Run in Browser)
-Anda tidak harus menggunakan terminal untuk melihat hasilnya. Cukup gunakan salah satu cara berikut:
+LANGKAH 5: Menampilkan Halaman Web ke Layar (Run in Browser)
+tidak harus menggunakan terminal untuk melihat hasilnya. Cukup gunakan salah satu cara berikut:
 - Cara 1 (Paling Direkomendasikan): 
   1. Pasang ekstensi "Live Server" di VS Code (oleh Ritwick Dey).
   2. Klik kanan pada file `index.html` di folder utama (Root).

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="id" class="scroll-smooth overflow-x-hidden">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,10 +18,12 @@
 
   <!-- ══ NAVBAR ══ -->
 
-  <div class="pointer-events-none fixed top-12 left-1/2 -z-10 h-72 w-72 -translate-x-1/2 rounded-full bg-sky-300/40 dark:bg-blue-600/20 blur-3xl animate-float"></div>
-  <div class="pointer-events-none fixed top-1/3 -right-20 -z-10 h-80 w-80 rounded-full bg-blue-500/20 dark:bg-blue-900/20 blur-3xl animate-float" style="animation-delay: 2s;"></div>
+  <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+    <div class="absolute top-12 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-sky-300/40 dark:bg-blue-600/20 blur-3xl animate-float"></div>
+    <div class="absolute top-1/3 -right-20 h-80 w-80 rounded-full bg-blue-500/20 dark:bg-blue-900/20 blur-3xl animate-float" style="animation-delay: 2s;"></div>
+  </div>
 
-  <header class="fixed top-4 z-50 w-full px-4 sm:px-6" data-aos="fade-down" data-aos-duration="600">
+  <header data-aos="fade-down" data-aos-duration="800" class="fixed top-4 z-50 w-full px-4 sm:px-6 transition-all duration-300">
     <nav class="mx-auto flex max-w-5xl items-center justify-between rounded-full border border-sky-300 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 px-5 py-3 backdrop-blur-md shadow-md transition-all duration-300">
       <a href="index.html" class="font-display text-lg sm:text-xl font-extrabold tracking-tight text-slate-900 dark:text-white flex items-center gap-1.5 group">
         <span class="flex h-3 w-3 rounded-full bg-blue-600 dark:bg-blue-500 group-hover:scale-125 transition-transform"></span>
@@ -29,31 +31,33 @@
       </a>
 
       <ul class="hidden items-center gap-6 md:flex">
-        <li><a href="index.html" class="text-sm font-semibold text-slate-700 dark:text-slate-300 transition-colors hover:text-blue-600 dark:hover:text-blue-400">Home</a></li>
-        <li><a href="about.html" class="text-sm font-semibold text-slate-700 dark:text-slate-300 transition-colors hover:text-blue-600 dark:hover:text-blue-400">About</a></li>
+        <li><a href="index.html" class="text-sm font-semibold text-slate-900 dark:text-slate-100 transition-colors hover:text-blue-600 dark:hover:text-blue-400">Home</a></li>
+        <li><a href="about.html" class="text-sm font-semibold text-slate-900 dark:text-slate-100 transition-colors hover:text-blue-600 dark:hover:text-blue-400">About</a></li>
         <li><a href="projects.html" class="text-sm font-bold text-blue-600 dark:text-blue-400 transition-colors">Projects</a></li>
-        <li><a href="project-detail.html" class="text-sm font-semibold text-slate-700 dark:text-slate-300 transition-colors hover:text-blue-600 dark:hover:text-blue-400">Project Detail</a></li>
+        <li><a href="project-detail.html" class="text-sm font-semibold text-slate-900 dark:text-slate-100 transition-colors hover:text-blue-600 dark:hover:text-blue-400">Project Detail</a></li>
       </ul>
 
-      <div class="hidden items-center gap-3 md:flex">
+      <div class="flex items-center gap-2 sm:gap-3">
+        
         <button id="theme-toggle" aria-label="Toggle Tema" class="rounded-full border border-sky-300 dark:border-slate-700 bg-sky-50 dark:bg-slate-800 p-2 text-slate-700 dark:text-slate-200 transition-colors hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 dark:hover:text-slate-950">
           <svg id="icon-sun" class="hidden h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
           <svg id="icon-moon" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
         </button>
-        <a href="index.html#contact" class="btn-primary text-xs py-2 px-5 shadow-none">Hire Me</a>
-      </div>
 
-      <button id="menuToggle" aria-label="Menu" class="rounded-full p-2 text-slate-900 dark:text-white md:hidden hover:bg-sky-200 dark:hover:bg-slate-800 focus:outline-none transition-colors">
-        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-      </button>
+        <a href="index.html#contact" class="hidden md:inline-flex btn-primary text-xs py-2 px-5 shadow-none">Hire Me</a>
+
+        <button id="menuToggle" aria-label="Menu" class="rounded-full p-2 text-slate-900 dark:text-white md:hidden hover:bg-sky-200 dark:hover:bg-slate-800 focus:outline-none transition-colors">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
     </nav>
 
     <div id="mobileMenu" class="mx-auto mt-2 max-w-4xl hidden rounded-2xl border border-sky-300 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 px-5 py-5 backdrop-blur-lg md:hidden shadow-xl">
       <div class="flex flex-col gap-3">
-        <a href="index.html" class="rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-700 dark:text-slate-300 hover:bg-sky-50 dark:hover:bg-slate-800 flex items-center justify-between transition-colors">Home <span class="text-xs">&rarr;</span></a>
-        <a href="about.html" class="rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-700 dark:text-slate-300 hover:bg-sky-50 dark:hover:bg-slate-800 flex items-center justify-between transition-colors">About <span class="text-xs">&rarr;</span></a>
+        <a href="index.html" class="rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-900 dark:text-slate-100 hover:bg-sky-50 dark:hover:bg-slate-800 flex items-center justify-between transition-colors">Home <span class="text-xs">&rarr;</span></a>
+        <a href="about.html" class="rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-900 dark:text-slate-100 hover:bg-sky-50 dark:hover:bg-slate-800 flex items-center justify-between transition-colors">About <span class="text-xs">&rarr;</span></a>
         <a href="projects.html" class="rounded-xl px-4 py-2.5 text-sm font-bold bg-sky-100 dark:bg-slate-800 text-blue-600 dark:text-blue-400 flex items-center justify-between">Projects <span class="text-xs">&rarr;</span></a>
-        <a href="project-detail.html" class="rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-700 dark:text-slate-300 hover:bg-sky-50 dark:hover:bg-slate-800 flex items-center justify-between transition-colors">Project Detail <span class="text-xs">&rarr;</span></a>
+        <a href="project-detail.html" class="rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-900 dark:text-slate-100 hover:bg-sky-50 dark:hover:bg-slate-800 flex items-center justify-between transition-colors">Project Detail <span class="text-xs">&rarr;</span></a>
         <div class="pt-2 border-t border-sky-200 dark:border-slate-800 mt-1">
           <a href="index.html#contact" class="btn-primary w-full text-center text-xs py-3">Hire Me Now</a>
         </div>
@@ -70,7 +74,7 @@
         <h1 class="text-display font-display font-extrabold text-slate-900 dark:text-white mt-1 leading-tight">
           Portofolio & Eksplorasi Teknis
         </h1>
-        <p class="text-sm sm:text-base text-slate-700 dark:text-slate-300 mt-3 leading-relaxed">
+        <p class="text-sm sm:text-base text-slate-900 dark:text-slate-100 mt-3 leading-relaxed">
           Kumpulan implementasi nyata dalam membangun solusi perangkat lunak, pengembangan web, dan manajemen basis data.
         </p>
       </div>
@@ -90,7 +94,7 @@
             <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
               Aplikasi Pencatatan Tugas Kuliah
             </h2>
-            <p class="text-sm sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed">
+            <p class="text-sm sm:text-base text-slate-900 dark:text-slate-100 leading-relaxed">
               Sistem manajemen tugas mahasiswa desktop lokal yang dikembangkan untuk lingkungan Windows. Menggunakan arsitektur JavaFX dan Electron dengan penyimpanan basis data SQLite untuk memastikan responsivitas tinggi, konsistensi data, dan antarmuka yang bersih tanpa ketergantungan koneksi internet.
             </p>
             <div class="pt-2">
@@ -108,7 +112,7 @@
               <p class="text-blue-400">public class <span class="text-white font-bold">TaskManagerApp</span> {</p>
               <p class="pl-4 text-sky-400">private final <span class="text-slate-300">SQLiteConnection db;</span></p>
               <p class="pl-4 text-blue-500">public void <span class="text-white">renderDashboard()</span> {</p>
-              <p class="pl-8 text-slate-400">// Load user tasks & calculate progress</p>
+              <p class="pl-8 text-slate-200">// Load user tasks & calculate progress</p>
               <p class="pl-8 text-emerald-400">ui.displayActiveTasks(db.fetchPending());</p>
               <p class="pl-4 font-bold text-blue-400">}</p>
               <p>}</p>
@@ -127,7 +131,7 @@
             <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
               Sistem Informasi E-Learning Berbasis AI
             </h2>
-            <p class="text-sm sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed">
+            <p class="text-sm sm:text-base text-slate-900 dark:text-slate-100 leading-relaxed">
               Perancangan arsitektur sistem informasi e-learning cerdas yang mampu memberikan rekomendasi materi pembelajaran secara adaptif berdasarkan efektivitas pemahaman mahasiswa. Proyek mencakup pemodelan UML, alur sistem informasi, dan struktur integrasi mesin kecerdasan buatan.
             </p>
             <div class="pt-2">
@@ -169,7 +173,7 @@
             <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
               Basis Data Keuangan Pribadi
             </h2>
-            <p class="text-sm sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed">
+            <p class="text-sm sm:text-base text-slate-900 dark:text-slate-100 leading-relaxed">
               Desain dan pemodelan sistem basis data relasional untuk pencatatan, pengelompokan, dan pelaporan arus kas keuangan pribadi. Diberdayakan dengan normalisasi data tabel yang efisien untuk mencegah redundansi dan mempercepat proses eksekusi query pelaporan.
             </p>
             <div class="pt-2">
@@ -198,7 +202,7 @@
 
    <!-- ══ FOOTER ══ -->
 
-  <footer class="border-t border-sky-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-8 text-center text-xs font-mono text-slate-600 dark:text-slate-400">
+  <footer class="border-t border-sky-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-8 text-center text-xs font-mono text-slate-800 dark:text-slate-200">
     <div class="mx-auto max-w-5xl px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
       <p class="font-bold text-slate-900 dark:text-white">&copy; 2026 Rey Ardyansyah.</p>
       <p>Computer Club Digital Talent 2026 &bull; Web Development</p>
